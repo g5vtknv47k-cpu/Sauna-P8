@@ -1,44 +1,41 @@
-# Sauna P8 🌈♨️ — Render-ready
+# Sauna P8 – Thế giới avatar tự do
 
-Social multiplayer pixel-inspired web game built with Node.js, Express and Socket.IO.
+Game web multiplayer realtime phong cách social avatar.
 
-## Included
-- Nickname login and character customization
-- Shared room code
-- Realtime multiplayer via Socket.IO
-- City zones and Sauna P8 rooms
-- Chat bubbles above avatars
-- Friendly emotes/interactions
-- Mobile controls
-- `/health` endpoint for Render
-- Binds to `0.0.0.0` and uses Render's `PORT`
-- No application-level player cap; actual capacity depends on the server/device
+## Tính năng
 
-## Deploy to Render
+- Multiplayer realtime (Socket.IO)
+- Toàn bộ giao diện tiếng Việt
+- Avatar tùy chỉnh
+- Nhiều phòng: Sảnh, Xông hơi, Jacuzzi, Phòng tối, Lounge, Thay đồ, Phòng tắm, Khu đấu
+- Chat + speech bubble
+- Emote + tương tác (ôm, hôn, ngủ cùng, vỗ về...)
+- Hệ thống đánh nhau nhẹ (social combat)
+- Phòng riêng tư 2 người
+- Khi vào phòng tắm / xông hơi → mặc khăn tắm
+- Hiển thị số người trong phòng, cảnh báo khi đông
+- Joystick mobile + WASD PC
+- Không giới hạn số người cứng
 
-### Option A — GitHub + Render Blueprint
-1. Upload the contents of this ZIP to a GitHub repository.
-2. In Render, choose **New → Blueprint**.
-3. Select that GitHub repository.
-4. Render reads `render.yaml` automatically.
-5. Confirm the service `sauna-p8`.
-6. Wait for **Live**, then tap **Open**.
+## Chạy local
 
-### Option B — Web Service
-Use:
-- Runtime: **Node**
-- Build Command: `npm install`
-- Start Command: `npm start`
-- Health Check Path: `/health`
-
-Do not use a Static Site: this game needs a Node server and Socket.IO.
-
-## Local
 ```bash
 npm install
 npm start
 ```
-Then open `http://localhost:10000`.
 
-## Safety/design
-Interactions are friendly/non-explicit. The dark room is a social room; beds/furniture are decorative/emote surfaces. No drug-sale marketplace or sexual activity system is included.
+Mở http://localhost:3000
+
+## Deploy Render
+
+1. Push lên GitHub
+2. Render.com → New Web Service → chọn repo
+3. Tự dùng render.yaml
+4. Deploy → mở URL
+
+## Điều khiển
+
+- Mobile: Joystick + nút 💕 😊 💬 ⚔️
+- PC: WASD / mũi tên, Enter chat, E ngồi, F đánh
+- Chạm vào người chơi để chọn mục tiêu (đánh / tương tác)
+- Nút 🔒 tạo / vào phòng riêng
